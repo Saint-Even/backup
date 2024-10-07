@@ -1,9 +1,9 @@
 #!/bin/bash
 
 date=$(date +%Y-%m-%d)
-sou=$(pwd)
+sou="$(pwd)"
 tar="/mnt/QNAP/holdens/ARCH/backup"
-name=...process pwd to basename
+name=$(basename "$(pwd)")
 n="${tar}/${name}.tar.gz"
 
-tar -zcvpf ${n} ${sou}
+tar -zcvpf "${n}" "${sou}"
